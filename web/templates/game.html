@@ -1,0 +1,55 @@
+{% load static %}
+<html>
+    <head>
+        <title>Hangman</title>
+    </head>
+    <body>
+
+Solution  = {{solution}}
+
+Game Board = {{gameBoard}}
+
+<a href="/new_game">New Game</a>
+
+<form action="/game/" method="post">
+    {% csrf_token %}
+
+<table width="100%" border="0" padding="0">
+    <tr>
+        <td width="100%" colspan="26">
+            <img width="100%" height="auto" src="{% static "" %}images/board_{{incorrectGuessCounter}}.png" />
+        </td>
+    </tr>
+    <tr>
+        <td><input type="submit" name="letter_A" value="A" /></td>
+        <td><input type="submit" name="letter_B" value="B" /></td>
+        <td><input type="submit" name="letter_C" value="C" /></td>
+        <td><input type="submit" name="letter_D" value="D" /></td>
+        <td><input type="submit" name="letter_E" value="E" /></td>
+        <td><input type="submit" name="letter_F" value="F" /></td>
+        <td><input type="submit" name="letter_G" value="G" /></td>
+        <td><input type="submit" name="letter_H" value="H" /></td>
+        <td><input type="submit" name="letter_I" value="I" /></td>
+        <td><input type="submit" name="letter_J" value="J" /></td>
+        <td><input type="submit" name="letter_K" value="K" /></td>
+        <td><input type="submit" name="letter_L" value="L" /></td>
+        <td><input type="submit" name="letter_M" value="M" /></td>
+        <td><input type="submit" name="letter_N" value="N" /></td>
+        <td><input type="submit" name="letter_O" value="O" /></td>
+        <td><input type="submit" name="letter_P" value="P" /></td>
+        <td><input type="submit" name="letter_Q" value="Q" /></td>
+        <td><input type="submit" name="letter_R" value="R" /></td>
+        <td><input type="submit" name="letter_S" value="S" /></td>
+        <td><input type="submit" name="letter_T" value="T" /></td>
+        <td><input type="submit" name="letter_U" value="U" /></td>
+        <td><input type="submit" name="letter_V" value="V" /></td>
+        <td><input type="submit" name="letter_W" value="W" /></td>
+        <td><input type="submit" name="letter_X" value="X" /></td>
+        <td><input type="submit" name="letter_Y" value="Y" /></td>
+        <td><input type="submit" name="letter_Z" value="Z" /></td>
+    </tr>
+</table>
+</form>
+
+</body>
+</html>

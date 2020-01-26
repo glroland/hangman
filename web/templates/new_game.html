@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>Hangman!</title>
+    </head>
+    <body>
+
+        <form action="/new_game/" method="post">
+            {% csrf_token %}
+            {{ form }}
+
+            <input type="submit" value="New Game">
+        </form>
+        
+    </body>
+</html>
